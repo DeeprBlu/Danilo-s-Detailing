@@ -34,7 +34,7 @@
 
   /* ─── NAV ─── */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.4rem 3rem;
     background: rgba(10,10,10,0.85);
@@ -583,17 +583,16 @@
   /* ─── MOBILE 700px ─── */
   @media (max-width: 700px) {
     /* Nav: hamburger */
-    .nav-hamburger { display: flex; }
+    .nav-hamburger { display: flex; z-index: 1000; }
     .nav-menu {
-      position: fixed; inset: 0; top: 0;
-      background: rgba(10,10,10,1);
-      backdrop-filter: blur(16px);
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.97);
       flex-direction: column;
       align-items: center; justify-content: center;
       gap: 2.5rem;
       transform: translateX(100%);
       transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-      z-index: 400;
+      z-index: 900;
     }
     .nav-menu.open { transform: translateX(0); }
     .nav-menu li a {
